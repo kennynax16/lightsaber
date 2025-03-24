@@ -18,45 +18,7 @@
     </style>
 
     <title>Home - Lightsaber Studio</title>
-    <meta name="robots" content="max-image-preview:large" />
-    <link rel="canonical" href="https://lightsaber.studio/" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Lightsaber Studio -" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Home - Lightsaber Studio" />
-    <meta property="og:url" content="https://lightsaber.studio/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Home - Lightsaber Studio" />
-    <style id="classic-theme-styles-inline-css" type="text/css">
-        /*! This file is auto-generated */
-        .wp-block-button__link {
-            color: #fff;
-            background-color: #32373c;
-            border-radius: 9999px;
-            box-shadow: none;
-            text-decoration: none;
-            padding: calc(0.667em + 2px) calc(1.333em + 2px);
-            font-size: 1.125em;
-        }
-        .wp-block-file__button {
-            background: #32373c;
-            color: #fff;
-            text-decoration: none;
-        }
-    </style>
-    <link rel="shortlink" href="https://lightsaber.studio/" />
-    <link
-        rel="alternate"
-        title="oEmbed (JSON)"
-        type="application/json+oembed"
-        href="https://lightsaber.studio/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flightsaber.studio%2F"
-    />
-    <link
-        rel="alternate"
-        title="oEmbed (XML)"
-        type="text/xml+oembed"
-        href="https://lightsaber.studio/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flightsaber.studio%2F&#038;format=xml"
-    />
+
     <link
         rel="icon"
         href={{asset('assets/img/icons.jpg')}}
@@ -87,6 +49,16 @@
 
 </head>
 <body class="home page-template-default page page-id-12">
+<div class="preloader">
+    <div class="preloaderBG"></div>
+    <div class="preloaderImg">
+        <a href="https://lightsaber.studio"
+        ><img
+                src="assets/img/LightSaber_logo.svg"
+                alt=""
+            /></a>
+    </div>
+</div>
 
 <div class="wrapper">
     <header>
