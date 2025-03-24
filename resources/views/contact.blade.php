@@ -22,6 +22,16 @@
                             <p role="status" aria-live="polite" aria-atomic="true"></p>
                             <ul></ul>
                         </div>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <form
                             action="{{ route('contact.store') }}"
                             id="contact-form"

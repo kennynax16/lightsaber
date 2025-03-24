@@ -1391,3 +1391,14 @@ footer .container{
     min-height: 420px;
   }
 }
+
+.error-border {
+    border: 2px solid red !important;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}

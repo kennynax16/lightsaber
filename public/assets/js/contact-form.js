@@ -1,23 +1,35 @@
 $(document).ready(function () {
-    // Перехватываем отправку формы
     $('#contact-form').on('submit', function (e) {
-        e.preventDefault(); // Отменяем стандартную отправку формы
+        e.preventDefault();
 
-        // Собираем данные формы
-        var formData = $(this).serialize();
+        let form = $(this);
+        let formData = form.serialize();
 
-        // Отправляем данные на сервер через AJAX
+        // Очистка старых ошибок перед новой отправкой
+        $('.error-message').remove();
+        $('.wpcf7-form-control').removeClass('error-border');
+
         $.ajax({
-            url: $(this).attr('action'), // Получаем URL из атрибута action формы
+            url: form.attr('action'),
             type: 'POST',
             data: formData,
-            success: function (response) {
-                // Можно очистить форму или сделать другие действия
-                $('#contact-form')[0].reset();
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            error: function (xhr, status, error) {
-                // Обработка ошибок
-                alert('There was an error sending the message. Please try again.');
+            success: function (response) {
+
+                form[0].reset();
+            },
+            error: function (xhr) {
+                let errors = xhr.responseJSON.errors;
+
+                if (errors) {
+                    $.each(errors, function (key, messages) {
+                        let field = $('[name="' + key + '"]');
+                        field.addClass('error-border'); // Добавляем рамку
+                        field.after('<span class="error-message">' + messages[0] + '</span>'); // Показываем текст ошибки
+                    });
+                }
             }
         });
     });

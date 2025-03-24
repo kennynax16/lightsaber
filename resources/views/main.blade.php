@@ -52,7 +52,7 @@
 <div class="preloader">
     <div class="preloaderBG"></div>
     <div class="preloaderImg">
-        <a href="https://lightsaber.studio"
+        <a href={{ route('index') }}
         ><img
                 src="assets/img/LightSaber_logo.svg"
                 alt=""
@@ -64,7 +64,7 @@
     <header>
         <div class="container">
             <div class="logo_header">
-                <a href="https://lightsaber.studio"
+                <a href={{ route('index') }}
                 ><img src="{{ asset('assets/img/LightSaber_logo.svg') }}" alt="">
                 </a>
             </div>
